@@ -12,20 +12,20 @@ rm -Rf $OUT_PATH
 
 cd $BUILD_PATH
 
-curl https://cmake.org/files/v3.1/cmake-3.1.1.tar.gz -o cmake.tar.gz
+curl https://cmake.org/files/v3.5/cmake-3.5.1.tar.gz -o cmake.tar.gz
 tar -xvzf cmake.tar.gz
-cd cmake-3.1.1
+cd cmake-3.5.1
 ./bootstrap
 make
 
 cd $BUILD_PATH
 
-curl -L http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.10/opencv-2.4.10.zip/download -o opencv.zip
+curl -L http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/3.4.3/opencv-3.4.3.zip/download -o opencv.zip
 unzip opencv.zip
-cd opencv-2.4.10
+cd opencv-3.4.3
 mkdir release
 cd release
-/tmp/cmake-3.1.1/bin/cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$OUT_PATH ..
+/tmp/cmake-3.5.1/bin/cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$OUT_PATH ..
 make
 make install
 
