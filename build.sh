@@ -12,7 +12,7 @@ rm -Rf $OUT_PATH
 
 cd $BUILD_PATH
 
-curl http://www.cmake.org/files/v3.1/cmake-3.1.1.tar.gz -o cmake.tar.gz
+curl https://cmake.org/files/v3.1/cmake-3.1.1.tar.gz -o cmake.tar.gz
 tar -xvzf cmake.tar.gz
 cd cmake-3.1.1
 ./bootstrap
